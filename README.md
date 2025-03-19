@@ -30,3 +30,47 @@ npm run dev
 
 ## ライセンス
 このプロジェクトはMITライセンスのもとで提供されます。
+
+## ディレクトリ構成
+```
+/autarkia
+├── /frontend          # フロントエンド（Next.js）
+│   ├── /components   # 再利用可能なUIコンポーネント
+│   ├── /pages        # Next.jsのルーティング（ページごとのディレクトリ）
+│   │   ├── index.tsx        # トップページ
+│   │   ├── dashboard.tsx    # ユーザーダッシュボード
+│   │   ├── content.tsx      # サブスクコンテンツページ
+│   │   ├── creator.tsx      # クリエイター向けページ
+│   │   ├── login.tsx        # ウォレット接続ページ
+│   ├── /styles       # TailwindCSSのカスタムスタイル
+│   ├── /utils        # ウォレット認証・NFT取得のユーティリティ関数
+│   ├── /hooks        # カスタムReact Hooks（ウォレット接続など）
+│   ├── /context      # グローバル状態管理（React Context API）
+│   ├── package.json  # 依存関係
+│   ├── tsconfig.json # TypeScript設定
+│   ├── next.config.js # Next.js設定
+│   └── README.md     # フロントエンドのドキュメント
+│
+├── /backend          # バックエンド（Spring Boot）
+│   ├── /src/main/java/com/autarkia  # Javaソースコード
+│   ├── /src/main/resources          # 設定ファイル
+│   ├── application.yml              # Spring Boot設定
+│   ├── Dockerfile                   # Dockerコンテナ設定
+│   ├── build.gradle                 # Gradleビルド設定
+│   └── README.md                     # バックエンドのドキュメント
+│
+├── /contracts        # スマートコントラクト（Solidity）
+│   ├── /src         # Solidityスマートコントラクト
+│   ├── /scripts     # Hardhatデプロイスクリプト
+│   ├── hardhat.config.js  # Hardhat設定
+│   ├── package.json       # 依存関係
+│   └── README.md          # コントラクトのドキュメント
+│
+├── /docs             # プロジェクトドキュメント
+│   ├── architecture.md  # システム設計資料
+│   ├── api.md          # API仕様
+│   ├── smart-contract.md  # スマートコントラクト仕様
+│   └── README.md       # ドキュメント全体の説明
+│
+└── README.md         # プロジェクト全体のREADME
+```
